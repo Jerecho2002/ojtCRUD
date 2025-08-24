@@ -15,6 +15,6 @@ class EmailsController extends Controller
         $content = $request->input('content');
 
         Mail::to($email)->send(new WelcomeMail($subject,$content));
-        return redirect(route('indexPageName'))->with('success', 'Successfully email sent to ' . $email);
+        return redirect(route('indexPageName'))->with('email-success', 'Successfully email sent to ' . $email);
     }
 }

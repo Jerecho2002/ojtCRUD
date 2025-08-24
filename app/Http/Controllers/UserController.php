@@ -34,7 +34,7 @@ class UserController extends Controller
         ];
 
         if(Auth::attempt($credentials)){
-            return redirect(route('indexPageName'))->with('success', 'Successfully Created User');
+            return redirect(route('indexPageName'))->with('success', 'Successfully Login User');
         }
 
         return back()->with('error', 'Invalid credentials');

@@ -72,8 +72,8 @@
    </table>
    <div>
     <h1>Email Sender</h1>
-        @if(session()->has('success'))
-                <p>{{ session('success') }}</p>
+        @if(session()->has('email-success'))
+                <p>{{ session('email-success') }}</p>
             @endif
             <form action="{{ route('sendMailName') }}" method="post">
                 @csrf
